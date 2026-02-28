@@ -85,19 +85,19 @@ body {
   border: solid blue;
 }
 
-.main-section {
-  grid-area: main;
-   display: grid;
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-columns: 1fr;
-  grid-template-areas: 
-  "hero"
-  "equipment-repairs"
-  "brand-repairs"
-  "service-price"
-  "footer";
-  gap: 8px;
-}
+// .main-section {
+//   grid-area: main;
+//    display: grid;
+//   grid-template-rows: repeat(5, 1fr);
+//   grid-template-columns: 1fr;
+//   grid-template-areas: 
+//   "hero"
+//   "equipment-repairs"
+//   "brand-repairs"
+//   "service-price"
+//   "footer";
+//   gap: 8px;
+// }
 
 .hero {
   grid-area: hero;
@@ -195,11 +195,6 @@ h1::before {
   }
 
 
-
-section {
-  border: solid red;
-}
-
 article {
   display: flex;
  justify-content: space-between;
@@ -229,7 +224,6 @@ article p {
  width: 450px;
 }
 
-
 h1 {
   color: #7e7e82;
   font-size: 16px;
@@ -240,10 +234,10 @@ h1 {
 .swiper-slide {
   max-width: 240px;
   height: 72px;
-  // margin: 10px 0px 30px 0px;
+  margin: 10px 0px 30px 0px;
   text-align: center;
   font-size: 18px;
-  background-color: #fff;
+  background: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -256,28 +250,10 @@ h1 {
 }
 
 .swiper {
-  margin-left: auto;
-  margin-right: auto;
-   border: black;
-    width: auto;
-     grid-area: equipment-repairs;
   height: 200px;
+  overflow: hidden;
+ width: auto;
 }
-
- .swiper-wrapper {
-  grid-area: equipment-repairs;
-  width: 1120px;
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: auto;
-    gap: 10px;
-  }
-
-  button {
-    display: flex;
-  }
-  
 
 button {
   border: none;
@@ -291,37 +267,22 @@ button {
 
 .showbutton,
 .hidebutton {
-  // display: none;
+  display: none;
 }
 
 .hide {
-  // display: none;
+  display: none;
 }
 
+  .swiper-wrapper {
+    // height: 200px;
+    // overflow: hidden;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 
-// header group display
+  button {
+    display: flex;
+  }
 
-// .first-header-group {
-//     display: flex;
-//     justify-content: space-between;
-//     margin-right: 16px;
-//     align-items: center;
-//     gap: 16px;
-  // }
-
-// .second-third-header-group {
-//   display: flex;
-// }
-// .second-header-group {
-//   display: flex;
-//   justify-content: space-between;
-//   margin-right: 16px;
-//   gap: 16px;
-// }
-
-// .third-header-group {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   gap: 16px;
-// }
