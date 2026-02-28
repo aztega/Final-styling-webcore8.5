@@ -10,59 +10,186 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <section class="sidebar">
-      <header class="side-bar-header">
-        <div class="logo-close-icon">
-          <img
-            class="icons"
-            src="./img/close Icon Container.png"
-            alt="close-icon"
-          />
-          <img src="./img/Logo Group.png" alt="cps logo" />
+    <header class="main-header">
+      <div class="header-container">
+
+        <!-- the burger and cps logo grouped together -->
+        <div class="first-header-group">
+          <div class="icons burger-icon">
+            <img src="./img/Menu icon.png" alt="burger-icon" />
+          </div>
+          <div class="divider one"></div>
+          <div class="icons logo">
+            <img src="./img/Logo Group.png" alt="cps-logo" />
+          </div>
         </div>
-        <div class="icons check-status">
-          <img src="./img/Search Icon Container.png" alt="check status icon" />
-        </div>
-      </header>
-      <div class="side-bar-menu">
-        <div class="active"></div>
-        <ul>
-          <li><a href="#">Equipment repair</a></li>
-          <li><a href="#">Services and solutions</a></li>
-          <li><a href="#">Corporate clients</a></li>
-          <li><a href="#">Equipment sellers</a></li>
-          <li><a href="#">Partners</a></li>
-          <li><a href="#">Manufacturers</a></li>
-          <li><a href="#">Our service centres</a></li>
-          <li><a href="#">Contacts</a></li>
-        </ul>
-      </div>
-      <div class="side-menu-footer">
-        <div class="footer-icons">
-          <img
-            class="icons"
-            src="./img/Call Icon Container.png"
-            alt="call icon"
-          />
-          <img
-            class="icons"
-            src="./img/Chat Icon Container.png"
-            alt="chat icon"
-          />
-          <img
-            class="icons"
-            src="./img/Profile Icon Container.png"
-            alt="profile icon"
-          />
-        </div>
-        <p>mail@cps.com</p>
-        <p>8 800 890 8900</p>
-        <div class="language">
-          <a href="#">RU</a>
-          <a href="#">EN</a>
-          <a href="#">CH</a>
+        <!-- contact, chat and profile view grouped together -->
+        <div class="second-third-header-group">
+          <div class="second-header-group">
+            <div class="icons call-icon">
+              <img src="./img/Call Icon Container.png" alt="call-icon" />
+            </div>
+            <div class="icons chat-icon">
+              <img src="./img/Chat Icon Container.png" alt="chat-icon" />
+            </div>
+            <div class="icons profile-icon">
+              <img
+                src="./img/Profile Icon Container.png"
+                alt="profile-icon"
+              />
+            </div>
+            <div class="divider two"></div>
+          </div>
+
+          <!-- repair and check status grouped together -->
+          <div class="third-header-group">
+            <div class="icons repair-icon">
+              <img src="./img/Repair Icon Container.png" alt="repair-icon" />
+            </div>
+            <div class="icons check-status-icon">
+              <img
+                src="./img/Check Status Icon Container.png"
+                alt="icons check-status-icon"
+              />
+            </div>
+          </div>
         </div>
       </div>
+     
+        <div class="large-screen-header">
+          <h1>Services and Support</h1>
+          <div class="large-screen-header-nav">
+            <div>
+              <p>Submit a request</p>
+              <img src="./img/Repair Icon Container.png" alt="repair-icon" />
+            </div>
+            <div>
+              <p>Repair status</p>
+              <img
+                src="./img/Check Status Icon Container.png"
+                alt="repair-icon"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="side-menu-links">
+          <a class="links devices" href="#">Devices we repair</a>
+          <a class="links additional" href="#">Additional services</a>
+          <a class="links services" href="#">Services prices</a>
+          <a class="links addresses" href="#">Addresses of service centres</a>
+          <a class="links special" href="#">Special prices</a>
+          <a class="links review" href="#">Reviews</a>
+        </div>
+      </div>
+      
+    </header>
+
+
+    <section class="sidebar"></section>
+
+
+    <section class="main-section">
+      <div class="hero">
+        <article>
+          <div class="text-area">
+            <p>
+              We are an authorised service centre for Dell equipment repairs.
+              Only with us can you repair your Dell laptop with the official
+              manufacturer's warranty. <br /><br />
+              <br />We have been successfully operating since 1992 and have
+              earned a reputation as a reliable partner, as evidenced by our
+              large number of loyal customers. We take pride in the fact that
+              clients come to us through recommendations and, in turn, recommend
+              us to their family and friends.
+            </p>
+            <div class="readmore-cta">
+              <img
+                class="readmore-expand-icon"
+                src="./img/Expand icon.png"
+                alt="readmore-expand-icon"
+              />
+              <p class="readmore-cta-button">Read More</p>
+            </div>
+          </div>
+
+          <div class="image-container">
+            <img src="./img/Image Container.png" alt="cps-logo-mockup" />
+          </div>
+        </article>
+      </div>
+
+      <section class="equipment-repairs">
+
+
+<h1>REPAIR OF EQUIPMENT FROM VARIUS BRANDS</h1>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./img/lenovo.png" alt="lenovo logo" />
+          <img src="./img/Go Icon Container.png" alt="go-icon" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/samsung.png" alt="samsung logo" />
+          <img src="./img/Go Icon Container.png" alt="go-icon" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/apple.png" alt="apple logo" />
+          <img src="./img/Go Icon Container.png" alt="go-icon" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/viewSonic.png" alt="viewsonic logo" />
+          <img src="./img/Go Icon Container.png" alt="go-icon" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/bosch.png" alt="bosch logo" />
+          <img src="./img/Go Icon Container.png" alt="go-icon" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/hp.png" alt="hp logo" />
+          <img src="./img/Go Icon Container.png" alt="go-icon" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/acer.png" alt="acer logo" />
+          <img src="./img/Go Icon Container.png" alt="go-icon" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/sony.png" alt="sony logo" />
+          <img src="./img/Go Icon Container.png" alt="go-icon" />
+        </div>
+        <div class="swiper-slide bottom">
+          <img src="./img/lenovo.png" alt="lenovo logo" />
+          <img src="./img/Go Icon Container.png" alt="go-icon" />
+        </div>
+        <div class="swiper-slide bottom">
+          <img src="./img/samsung.png" alt="samsung logo" />
+          <img src="./img/Go Icon Container.png" alt="go-icon" />
+        </div>
+        <div class="swiper-slide bottom">
+          <img src="./img/apple.png" alt="apple logo" />
+          <img src="./img/Go Icon Container.png" alt="go-icon" />
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+    </div>
+    <button class="show-button" id="showButton">
+      <img src="./img/Expand icon.png" alt="show icon" />Show all
+    </button>
+    <button class="hide-button hide" id="hideButton">
+      <img src="./img/hid Icon.png" alt="hide icon" />Hide
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+      </section>
+
+
+
+
+      <section class="brand-repairs"></section>
+      <section class="service-price"></section>
+      <footer></footer>
     </section>
   </body>
 </html>

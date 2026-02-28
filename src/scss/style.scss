@@ -1,6 +1,7 @@
 $bgColor: #F8F8F8;
 $text: #1B1C21;
 
+
 // @font-face {
 //   font-family: 'Comic';
 //   src: url('../fonts/comic.ttf') format('truetype');
@@ -47,120 +48,280 @@ $text: #1B1C21;
 }
 
 
+// body {
+//   display: flex;
+//   flex-direction: column;
+//   font-family: "TTLakes";
+//   color: #1B1C21;
+//  min-height: 100vh;
+// }
+
+
+
 body {
-  display: flex;
-  flex-direction: column;
+  width: 1440px;
+  max-width: 100%;
+   min-height: 100vh;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 200px 1fr;
+  grid-template-areas: 
+  "sidebar header"
+  "sidebar main";
   font-family: "TTLakes";
-  color: #1B1C21;
- min-height: 100vh;
+  color: $text;
+  gap: 10px;
+  // padding: 20px;
 }
 
-main {
+.main-header {
+  grid-area: header;
+  display: grid;
+   background-color: $bgColor;
+}
+.sidebar {
+  grid-area: sidebar;
+  border: solid blue;
+}
+
+.main-section {
+  grid-area: main;
+   display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "hero"
+  "equipment-repairs"
+  "brand-repairs"
+  "service-price"
+  "footer";
+  gap: 8px;
+}
+
+.hero {
+  grid-area: hero;
+  border: none;
+}
+
+.header-container {
   display: flex;
-  flex-direction: column;
-  flex-grow: 1;
- height: 100vh;
-  background-color: #fff;
-  max-width: 320px;
-  box-shadow:  0px 0px 24px 1px rgba(0,0,0,0.2);
-  overflow-y: auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $bgColor;
+  // padding: 16px;
+  // border-bottom: solid 1px #d9fff5;
+} 
+
+.main-header .icons {
+  width: 40px;
 }
 
+// .main-header {
+//   display: block;
+// }
 
-header {
+.first-header-group, .second-header-group, .third-header-group {
+  display: none;
+}
+ 
+
+.large-screen-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  padding: 24px;
-  margin-bottom: 16px;
+  // margin-top: 30px;
 }
 
-.logo-close-icon {
-  display: flex;
-  justify-content: center;
+.large-screen-header-nav div {
+  display: inline-flex;
   align-items: center;
-  gap: 15px;
+  flex-wrap: wrap;
+  margin: 10px;
 }
 
-.side-bar-menu{
-  position: relative;
-  display: flex;
-  height: 100%;
-}
-
-.side-bar-menu ul li {
-
-  padding: 16px 0px;
-}
-
-.side-bar-menu ul li a {
-  text-decoration: none;  
-  color: #1B1C21;
-  margin: 24px;
-font-size: 16px;
-font-weight: 500;
-}
-
-.side-bar-menu ul li a:hover {
-font-style: bold;
-font-weight: 700;
-text-shadow: 2px 4px 2px #00000040;
-}
-
-.icons:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
-.side-bar-menu ul li:active {
-  border-left: solid #41F6D7 5px;
-}
-
-.side-menu-footer {
-margin-top: auto;
-  margin-left: 24px;
-}
-
-.footer-icons {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 15px;
-}
-
-.side-menu-footer p {
-  margin-bottom: auto;
+.large-screen-header-nav p {
   font-weight: 500;
 }
 
-.side-menu-footer p:last-of-type {
-  font-size: 24px;
+.large-screen-header-nav div img {
+  margin-left: 8px;
+}
+
+h1 {
+  font-size: 28px;
   font-weight: 700;
+  margin-top: 8px;
 }
 
-.language {
-  display: flex;
-  justify-content: flex-start;
-  gap: 16px;
-  padding: 24px 0px ;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.language a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.language a:visited {
-  color: #454649;
-}
-
-.active {
-  width: 5px;
+h1::before {
+  content: "";
   height: 40px;
-  background-color:#41F6D7 ;
+  border: solid 2px #41f6d7;
+  margin: 0px 16px 0px 0px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  position: absolute;
 }
+.side-menu-links {
+    margin: 20px auto auto 20px;
+    // max-height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+     gap: 16px;
+    // overflow-x: auto;
+  }
+
+  .side-menu-links a {
+    text-decoration: none;
+    min-width: 248px;
+    // margin-right: 10px;
+    color: $text;
+    border: solid 2px transparent;
+    border-radius: 9px;
+    padding: 5px;
+    background-color: $bgColor;
+    font-weight: 500;
+  }
+
+  .side-menu-links a:hover {
+    color: #565656;
+    border: solid 2px #41f6d7;
+    background-color: $bgColor;
+  }
+
+  .side-menu-links::-webkit-scrollbar {
+    width: 0px;
+  }
+
+
+
+section {
+  border: solid red;
+}
+
+article {
+  display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ margin: auto;
+ padding: 16px;
+}
+
+article p {
+  font-size: 15px;
+  font-weight: 400;
+  width: 500px;
+}
+
+.readmore-cta {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.readmore-cta img {
+  width: 35px;
+  // margin-left: 16px;
+}
+
+.image-container img {
+ width: 450px;
+}
+
+
+h1 {
+  color: #7e7e82;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 5px;
+}
+
+.swiper-slide {
+  max-width: 240px;
+  height: 72px;
+  // margin: 10px 0px 30px 0px;
+  text-align: center;
+  font-size: 18px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border: solid 1px #eaeaea;
+}
+
+.swiper-slide img {
+  margin: 10px;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+   border: black;
+    width: auto;
+     grid-area: equipment-repairs;
+  height: 200px;
+}
+
+ .swiper-wrapper {
+  grid-area: equipment-repairs;
+  width: 1120px;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: auto;
+    gap: 10px;
+  }
+
+  button {
+    display: flex;
+  }
+  
+
+button {
+  border: none;
+  padding: 10px;
+  background: none;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  // display: none;
+}
+
+.showbutton,
+.hidebutton {
+  // display: none;
+}
+
+.hide {
+  // display: none;
+}
+
+
+// header group display
+
+// .first-header-group {
+//     display: flex;
+//     justify-content: space-between;
+//     margin-right: 16px;
+//     align-items: center;
+//     gap: 16px;
+  // }
+
+// .second-third-header-group {
+//   display: flex;
+// }
+// .second-header-group {
+//   display: flex;
+//   justify-content: space-between;
+//   margin-right: 16px;
+//   gap: 16px;
+// }
+
+// .third-header-group {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   gap: 16px;
+// }
