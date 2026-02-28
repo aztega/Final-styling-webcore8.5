@@ -1,0 +1,166 @@
+$bgColor: #F8F8F8;
+$text: #1B1C21;
+
+// @font-face {
+//   font-family: 'Comic';
+//   src: url('../fonts/comic.ttf') format('truetype');
+//   font-weight: normal;
+//   font-style: italic;
+// }
+
+// body {
+//   padding: 1rem;
+//   margin: 0;
+//   font-family: Comic, sans-serif;
+//   background-color: $bgColor;
+//   color: $text;
+// }
+
+@font-face {
+  font-family: "TTLakes";
+  src: url("../fonts/TTLakes-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TTLakes";
+  src: url("../fonts/TTLakes-Medium.woff")
+    format("woff");
+  font-weight: 500;
+  font-style: medium;
+}
+
+@font-face {
+  font-family: "TTLakes";
+  src: url("../fonts/TTLakes-Bold.woff")
+    format("woff");
+  font-weight: 700;
+  font-style: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "TTLakes";
+  color: #1B1C21;
+ min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+ height: 100vh;
+  background-color: #fff;
+  max-width: 320px;
+  box-shadow:  0px 0px 24px 1px rgba(0,0,0,0.2);
+  overflow-y: auto;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+.logo-close-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.side-bar-menu{
+  position: relative;
+  display: flex;
+  height: 100%;
+}
+
+.side-bar-menu ul li {
+
+  padding: 16px 0px;
+}
+
+.side-bar-menu ul li a {
+  text-decoration: none;  
+  color: #1B1C21;
+  margin: 24px;
+font-size: 16px;
+font-weight: 500;
+}
+
+.side-bar-menu ul li a:hover {
+font-style: bold;
+font-weight: 700;
+text-shadow: 2px 4px 2px #00000040;
+}
+
+.icons:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.side-bar-menu ul li:active {
+  border-left: solid #41F6D7 5px;
+}
+
+.side-menu-footer {
+margin-top: auto;
+  margin-left: 24px;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 15px;
+}
+
+.side-menu-footer p {
+  margin-bottom: auto;
+  font-weight: 500;
+}
+
+.side-menu-footer p:last-of-type {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.language {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+  padding: 24px 0px ;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.language a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.language a:visited {
+  color: #454649;
+}
+
+.active {
+  width: 5px;
+  height: 40px;
+  background-color:#41F6D7 ;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: absolute;
+}
