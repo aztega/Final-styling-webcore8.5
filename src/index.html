@@ -10,13 +10,13 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
+    <!--main header section-->
     <header class="main-header">
       <div class="header-container">
-
         <!-- the burger and cps logo grouped together -->
         <div class="first-header-group">
           <div class="icons burger-icon">
-            <img src="./img/Menu icon.png" alt="burger-icon" />
+            <img class="icons" src="./img/Menu icon.png" alt="burger-icon" />
           </div>
           <div class="divider one"></div>
           <div class="icons logo">
@@ -27,13 +27,13 @@
         <div class="second-third-header-group">
           <div class="second-header-group">
             <div class="icons call-icon">
-              <img src="./img/Call Icon Container.png" alt="call-icon" />
+              <img class="icons" src="./img/Call Icon Container.png" alt="call-icon" />
             </div>
             <div class="icons chat-icon">
-              <img src="./img/Chat Icon Container.png" alt="chat-icon" />
+              <img class="icons" src="./img/Chat Icon Container.png" alt="chat-icon" />
             </div>
             <div class="icons profile-icon">
-              <img
+              <img class="icons"
                 src="./img/Profile Icon Container.png"
                 alt="profile-icon"
               />
@@ -44,10 +44,10 @@
           <!-- repair and check status grouped together -->
           <div class="third-header-group">
             <div class="icons repair-icon">
-              <img src="./img/Repair Icon Container.png" alt="repair-icon" />
+              <img class="icons"  src="./img/Repair Icon Container.png" alt="repair-icon" />
             </div>
             <div class="icons check-status-icon">
-              <img
+              <img class="icons"
                 src="./img/Check Status Icon Container.png"
                 alt="icons check-status-icon"
               />
@@ -61,11 +61,11 @@
           <div class="large-screen-header-nav">
             <div>
               <p>Submit a request</p>
-              <img src="./img/Repair Icon Container.png" alt="repair-icon" />
+              <img class="icons" src="./img/Repair Icon Container.png" alt="repair-icon" />
             </div>
             <div>
               <p>Repair status</p>
-              <img
+              <img class="icons"
                 src="./img/Check Status Icon Container.png"
                 alt="repair-icon"
               />
@@ -81,10 +81,9 @@
           <a class="links review" href="#">Reviews</a>
         </div>
       </div>
-      
     </header>
 
-
+<!--sidebar section-->
     <section class="sidebar">
       <header class="side-bar-header">
         <div class="logo-close-icon">
@@ -143,7 +142,7 @@
       </div>
     </section>
 
-
+<!--hero section for the main content-->
     <section class="main-section">
       <div class="hero">
         <article>
@@ -174,6 +173,7 @@
         </article>
       </div>
 
+      <!--repair of varius equipment section-->
       <section class="equipment-repairs">
 <h2>REPAIR OF EQUIPMENT FROM VARIUS BRANDS</h2>
 
@@ -181,50 +181,49 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <img src="./img/lenovo.png" alt="lenovo logo" />
-          <img src="./img/Go Icon Container.png" alt="go-icon" />
+          <img class="icons"  src="./img/Go Icon Container.png" alt="go-icon" />
         </div>
         <div class="swiper-slide">
           <img src="./img/samsung.png" alt="samsung logo" />
-          <img src="./img/Go Icon Container.png" alt="go-icon" />
+          <img  class="icons" src="./img/Go Icon Container.png" alt="go-icon" />
         </div>
         <div class="swiper-slide">
           <img src="./img/apple.png" alt="apple logo" />
-          <img src="./img/Go Icon Container.png" alt="go-icon" />
+          <img class="icons"  src="./img/Go Icon Container.png" alt="go-icon" />
         </div>
         <div class="swiper-slide">
           <img src="./img/viewSonic.png" alt="viewsonic logo" />
-          <img src="./img/Go Icon Container.png" alt="go-icon" />
+          <img class="icons"  src="./img/Go Icon Container.png" alt="go-icon" />
         </div>
         <div class="swiper-slide">
           <img src="./img/bosch.png" alt="bosch logo" />
-          <img src="./img/Go Icon Container.png" alt="go-icon" />
+          <img class="icons"  src="./img/Go Icon Container.png" alt="go-icon" />
         </div>
         <div class="swiper-slide">
           <img src="./img/hp.png" alt="hp logo" />
-          <img src="./img/Go Icon Container.png" alt="go-icon" />
+          <img class="icons"  src="./img/Go Icon Container.png" alt="go-icon" />
         </div>
         <div class="swiper-slide">
           <img src="./img/acer.png" alt="acer logo" />
-          <img src="./img/Go Icon Container.png" alt="go-icon" />
+          <img class="icons"  src="./img/Go Icon Container.png" alt="go-icon" />
         </div>
         <div class="swiper-slide">
           <img src="./img/sony.png" alt="sony logo" />
-          <img src="./img/Go Icon Container.png" alt="go-icon" />
+          <img class="icons"  src="./img/Go Icon Container.png" alt="go-icon" />
         </div>
         <div class="swiper-slide bottom">
           <img src="./img/lenovo.png" alt="lenovo logo" />
-          <img src="./img/Go Icon Container.png" alt="go-icon" />
+          <img class="icons"  src="./img/Go Icon Container.png" alt="go-icon" />
         </div>
         <div class="swiper-slide bottom">
           <img src="./img/samsung.png" alt="samsung logo" />
-          <img src="./img/Go Icon Container.png" alt="go-icon" />
+          <img class="icons" src="./img/Go Icon Container.png" alt="go-icon" />
         </div>
         <div class="swiper-slide bottom">
           <img src="./img/apple.png" alt="apple logo" />
-          <img src="./img/Go Icon Container.png" alt="go-icon" />
+          <img class="icons" src="./img/Go Icon Container.png" alt="go-icon" />
         </div>
       </div>
-
       <div class="swiper-pagination"></div>
     </div>
     <button class="show-button" id="showButton">
@@ -233,20 +232,67 @@
     <button class="hide-button hide" id="hideButton">
       <img src="./img/hid Icon.png" alt="hide icon" />Hide
     </button>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+   
       </section>
 
-
-
-
+<!--repair of varius brands section-->
       <section class="brand-repairs">
               <section class="equipment-repairs">
 <h2>REPAIR OF VARIUS TYPES OF EQUIPMENT</h2>
+<div class="swiper mySwiper brand-repair-swiper">
+<div class="swiper-wrapper brand-repair">
+<div class="swiper-slides slides">
+ <p>Laptop Repair</p>
+ <img class="icons"  src="./img/Go Icon Container.png" alt="go icon">
+</div> 
+<div class="swiper-slides slides">
+<p>Tablet Repair</p>
+<img class="icons" src="./img/Go Icon Container.png" alt="go icon">
+</div> 
+<div class="swiper-slides slides">
+<p>PC Repair</p>
+<img  class="icons" src="./img/Go Icon Container.png" alt="go icon">
+</div> 
+<div class="swiper-slides slides">
+<p>Monitor Repair</p>
+<img class="icons" src="./img/Go Icon Container.png" alt="go icon">
+</div> 
+<div class="swiper-slides slides">
+<p>Phone Repair</p>
+<img class="icons" src="./img/Go Icon Container.png" alt="go icon">
+</div> 
+<div class="swiper-slides slides">
+<p>Charger Repair</p>
+<img class="icons" src="./img/Go Icon Container.png" alt="go icon">
+</div> 
+<div class="swiper-slides slides">
+<p>Screen Repair</p>
+<img class="icons" src="./img/Go Icon Container.png" alt="go icon">
+</div> 
+<div class="swiper-slides slides">
+<p>Speaker Repair</p>
+<img class="icons" src="./img/Go Icon Container.png" alt="go icon">
+</div> 
+</div>
+</div>
+ <button class="show-second-button" id="showSecondButton">
+      <img src="./img/Expand icon.png" alt="show icon" />Show all
+    </button>
+    <button class="hide-second-button second-hide" id="hideSecondButton">
+      <img src="./img/hid Icon.png" alt="hide icon" />Hide
+    </button>
+
+
+
+
+
+
       </section>
 
 
       <section class="service-price"></section>
       <footer></footer>
     </section>
+     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   </body>
 </html>

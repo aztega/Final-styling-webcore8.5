@@ -46,30 +46,41 @@ body {
   color: $text;
   gap: 10px;
   background-color: $bgColor;
-}
 
-.main-header {
+  .main-header {
   grid-area: header;
   display: grid;
+  }
+
+  .icons {
+  width: 40px;
+  transition: all 0.3s ease;
+
+  &:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+}
 }
 
-
+.main-section {
+  grid-area: main;
+}
 
 .hero {
   grid-area: hero;
   border: none;
 }
 
+
+
 .header-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-} 
-
-.main-header .icons {
-  width: 40px;
 }
+
 
 .first-header-group, .second-header-group, .third-header-group {
   display: none;
@@ -80,30 +91,30 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-.large-screen-header-nav div {
+  div {
   display: inline-flex;
   align-items: center;
   flex-wrap: wrap;
   margin: 10px;
-}
 
-.large-screen-header-nav p {
-  font-weight: 500;
-}
-
-.large-screen-header-nav div img {
+  img {
   margin-left: 8px;
 }
+}
+
+p {
+  font-weight: 500;
+}
+}
+
 
 h1 {
   font-size: 28px;
   font-weight: 700;
   margin-top: 8px;
-}
 
-h1::before {
+  &::before {
   content: "";
   height: 40px;
   border: solid 2px #41f6d7;
@@ -111,14 +122,16 @@ h1::before {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+}
+
+
 .side-menu-links {
-    margin: 20px auto auto 20px;
+    margin: 16px auto 16px 20px;
     display: flex;
     flex-wrap: wrap;
      gap: 16px;
-  }
 
-  .side-menu-links a {
+     a {
     text-decoration: none;
     min-width: 248px;
     color: $text;
@@ -127,16 +140,16 @@ h1::before {
     padding: 5px;
     background-color: $bgColor;
     font-weight: 500;
-  }
 
-  .side-menu-links a:hover {
+    &:hover {
     color: #565656;
     border: solid 2px #41f6d7;
     background-color: #fff;
   }
 
-  .side-menu-links::-webkit-scrollbar {
-    width: 0px;
+  &::-webkit-scrollbar {
+    width: 0px;}
+  }
   }
 
 
@@ -146,23 +159,24 @@ article {
  flex-wrap: wrap;
  margin: auto;
  padding: 16px;
-}
 
-article p {
+ p {
   font-size: 15px;
   font-weight: 400;
   width: 500px;
+}
 }
 
 .readmore-cta {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-}
 
-.readmore-cta img {
+  img {
   width: 35px;
 }
+}
+
 
 .image-container img {
  width: 450px;
@@ -172,17 +186,32 @@ h2 {
   color: #7e7e82;
   font-size: 16px;
   font-weight: 400;
-margin: 16px 0px 0px 16px;
+margin: 16px 0px 16px 16px;
 border-top: solid 1px #6ff7e0 ;
 padding: 5px;
 background: linear-gradient(to right, #F8F8F8, #FFFF);
 }
 
-.swiper-slide {
+
+.swiper, 
+.swiper.mySwiper.brand-repair-swiper {
+  height: 200px;
+  overflow: hidden;
+ padding: 16px;
+
+ .swiper-wrapper {
+     margin: 16px 0px 16px 0px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+   justify-content: space-between;
+  justify-items: center;
+  gap: 16px;
+  }
+
+ .swiper-slide {
   max-width: 240px;
   height: 72px;
-  margin: 10px 0px 10px 0px;
-  text-align: center;
   font-size: 18px;
   background: #fff;
   display: flex;
@@ -190,17 +219,11 @@ background: linear-gradient(to right, #F8F8F8, #FFFF);
   align-items: center;
   border-radius: 10px;
   border: solid 1px #eaeaea;
-}
 
-.swiper-slide img {
+  img {
   margin: 10px;
 }
-
-.swiper {
-  height: 200px;
-  overflow: hidden;
- width: auto;
- padding: 16px;
+}
 }
 
 button {
@@ -210,7 +233,7 @@ button {
   font-family: inherit;
   font-weight: 500;
   cursor: pointer;
-  // display: none;
+  display: flex;
 }
 
 .showbutton,
@@ -222,18 +245,10 @@ button {
   display: none;
 }
 
-  .swiper-wrapper {
-    width: 99%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: auto;
-  }
-
-  button {
-    display: flex;
-  }
 
 .sidebar {
+  grid-column: 1;
+  grid-row: 2;
    grid-area: sidebar;
   display: flex;
   flex-direction: column;
@@ -241,18 +256,17 @@ button {
  height: 100vh;
   background-color: #fff;
   max-width: 320px;
-  // box-shadow:  0px 0px 24px 1px rgba(0,0,0,0.2);
+  // box-shadow:  0px 0px 24px 1px rgba(0,0,0,0.25);
   overflow-y: auto;
-}
 
-
-.side-bar-header {
+  .side-bar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   padding: 24px;
   margin-bottom: 16px;
+}
 }
 
 .logo-close-icon {
@@ -262,35 +276,32 @@ button {
   gap: 15px;
 }
 
-.side-bar-menu{
-  position: relative;
+.side-bar-menu {
+ position: relative;
   display: flex;
   height: 100%;
-}
 
-.side-bar-menu ul li {
-
+  li {
   padding: 16px 0px;
+  list-style: none;
 }
 
-.side-bar-menu ul li a {
+a {
   text-decoration: none;  
   color: #1B1C21;
   margin: 24px;
 font-size: 16px;
 font-weight: 500;
-}
+transition: all 0.3s ease;
 
-.side-bar-menu ul li a:hover {
+&:hover{
 font-style: bold;
 font-weight: 700;
-text-shadow: 2px 4px 2px #00000040;
+text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.25);
+}}
+
 }
 
-.icons:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-}
 
 .side-bar-menu ul li:active {
   border-left: solid #41F6D7 5px;
@@ -299,22 +310,22 @@ text-shadow: 2px 4px 2px #00000040;
 .side-menu-footer {
 margin-top: auto;
   margin-left: 24px;
+
+  p {
+  margin-bottom: auto;
+  font-weight: 500;
+
+  &:last-of-type {
+  font-size: 24px;
+  font-weight: 700;
+}
 }
 
-.footer-icons {
+  .footer-icons {
   display: flex;
   gap: 16px;
   margin-bottom: 15px;
 }
-
-.side-menu-footer p {
-  margin-bottom: auto;
-  font-weight: 500;
-}
-
-.side-menu-footer p:last-of-type {
-  font-size: 24px;
-  font-weight: 700;
 }
 
 .language {
@@ -324,16 +335,21 @@ margin-top: auto;
   padding: 24px 0px ;
   font-size: 14px;
   font-weight: 500;
-}
 
-.language a {
+  a:first-child{
+    color:  #98999a;
+  }
+
+  a {
   text-decoration: none;
   color: inherit;
+  
+  // &:visited {
+  //   color: #454649;
+  // }
+}
 }
 
-.language a:visited {
-  color: #454649;
-}
 
 .active {
   width: 5px;
@@ -343,3 +359,39 @@ margin-top: auto;
   border-bottom-right-radius: 10px;
   position: absolute;
 }
+
+ .swiper-wrapper.brand-repair{
+.slides {
+  width: 240px;
+  height: 160px;
+  background: #fff;
+  border-radius: 10px;
+  border: solid 1px #eaeaea;
+  position: relative;}
+
+  p {
+   margin: 16px;
+  }
+  img {
+    height: 40px;
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+  }
+ }
+  
+
+   
+
+  
+ 
+ 
+
+
+  
+  
+
+  
+
+
+

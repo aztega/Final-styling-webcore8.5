@@ -33,9 +33,9 @@ function hideBottomGrid(show) {
   hideBtn.style.display = show ? 'flex' : 'none';
 
  
-  if (typeof swiper !== 'undefined') {
-    swiper.update(); 
-  }
+  // if (typeof swiper !== 'undefined') {
+  //   swiper.update(); 
+  // }
 }
 
 
