@@ -238,8 +238,9 @@ button {
   display: none;
 }
 
-.hide {
+.hide, .hide-second-button.second-hide {
   display: none;
+   transition: height 0.5s ease;
 }
 
 
