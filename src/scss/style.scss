@@ -190,9 +190,8 @@ background: linear-gradient(to right, #F8F8F8, #FFFF);
 }
 
 
-.swiper, 
-.swiper.mySwiper.brand-repair-swiper {
-  height: 200px;
+.swiper{
+ height: 200px;
   overflow: hidden;
  padding: 16px;
 
@@ -222,6 +221,8 @@ background: linear-gradient(to right, #F8F8F8, #FFFF);
 }
 }
 }
+ 
+
 
 button {
   border: none;
@@ -231,11 +232,6 @@ button {
   font-weight: 500;
   cursor: pointer;
   display: flex;
-}
-
-.showbutton,
-.hidebutton {
-  display: none;
 }
 
 .hide, .hide-second-button.second-hide {
@@ -452,6 +448,11 @@ grid-template-columns: repeat(6, 1fr);
   }
  }
   
+//  .swiper.mySwiper.brand-repair-swiper {
+//   height: 200px;
+//   overflow: hidden;
+//  padding: 16px;
+//  }
 
    
 
