@@ -60,4 +60,3 @@ secondBottomItems.forEach(item => {
 
 showSecondBtn.addEventListener('click', () => hideSecondBottomGrid(true));
 hideSecondBtn.addEventListener('click', () => hideSecondBottomGrid(false));
-
