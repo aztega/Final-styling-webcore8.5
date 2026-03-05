@@ -58,21 +58,17 @@ font-size: 16px;
 font-weight: 500;
 
 &:hover {
-font-style: bold;
-font-weight: 700;
-text-shadow: 2px 4px 2px #00000040;
+@include textHover;
 }
 }
 }
 }
 
 .icons {
-  width: 40px;
-  transition: all 0.3s ease;
+  @include iconStyle;
 
   &:hover {
-  transform: scale(1.1);
-  cursor: pointer;
+  @include iconHover;
 }
 }
 
