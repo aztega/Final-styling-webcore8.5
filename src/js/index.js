@@ -20,11 +20,11 @@ import '../scss/style.scss'
 
 const showBtn = document.getElementById('showButton');
 const hideBtn = document.getElementById('hideButton');
-const bottomItems = document.querySelectorAll('.swiper');
+const bottomItems = document.querySelectorAll('.brandRepairs .swiper-wrapper');
 
 function hideBottomGrid(show) {
   bottomItems.forEach(item => {
-    item.style.height = show ? 'auto' : '200px'; 
+    item.style.height = show ? 'auto' : '170px'; 
     item.style.overflow = show ? 'visible' : 'hidden';
   });
 
@@ -33,9 +33,9 @@ function hideBottomGrid(show) {
   hideBtn.style.display = show ? 'flex' : 'none';
 
  
-  if (typeof swiper !== 'undefined') {
-    swiper.update(); 
-  }
+  // if (typeof swiper !== 'undefined') {
+  //   swiper.update(); 
+  // }
 }
 
 
@@ -43,36 +43,21 @@ showBtn.addEventListener('click', () => hideBottomGrid(true));
 hideBtn.addEventListener('click', () => hideBottomGrid(false));
 
 
-// const showBtn = document.getElementById('showButton');
-// const hideBtn = document.getElementById('hideButton');
-// const hideBottom = document.querySelectorAll('.brandsRepairs .swiper');
 
-// function hideBottomGrid(show) {
-//   hideBottom.forEach(item => {
-//     item.style.height = show ? 'auto' : '200px'; 
-//     item.style.overflow = show ? 'visible' : 'hidden';
-//   });
 
-//   showBtn.style.display = show ? 'none' : 'flex';
-//   hideBtn.style.display = show ? 'flex' : 'none';
-// }
+const showSecondBtn = document.getElementById('showSecondButton');
+const hideSecondBtn = document.getElementById('hideSecondButton');
+const hideSecondBottom = document.querySelectorAll('.equipment-repairs .swiper');
 
-// showBtn.addEventListener('click', () => hideBottomGrid(true));
-// hideBtn.addEventListener('click', () => hideBottomGrid(false));
+function hideSecondBottomGrid(show) {
+  hideSecondBottom.forEach(item => {
+    item.style.height = show ? 'auto' : '240px'; 
+    item.style.overflow = show ? 'visible' : 'hidden';
+  });
 
-// const showSecondBtn = document.getElementById('showSecondButton');
-// const hideSecondBtn = document.getElementById('hideSecondButton');
-// const hideSecondBottom = document.querySelectorAll('.brand-repairs .swiper');
+  showSecondBtn.style.display = show ? 'none' : 'flex';
+  hideSecondBtn.style.display = show ? 'flex' : 'none';
+}
 
-// function hideSecondBottomGrid(show) {
-//   hideSecondBottom.forEach(item => {
-//     item.style.height = show ? 'auto' : '200px'; 
-//     item.style.overflow = show ? 'visible' : 'hidden';
-//   });
-
-//   showSecondBtn.style.display = show ? 'none' : 'flex';
-//   hideSecondBtn.style.display = show ? 'flex' : 'none';
-// }
-
-// showSecondBtn.addEventListener('click', () => hideSecondBottomGrid(true));
-// hideSecondBtn.addEventListener('click', () => hideSecondBottomGrid(false));
+showSecondBtn.addEventListener('click', () => hideSecondBottomGrid(true));
+hideSecondBtn.addEventListener('click', () => hideSecondBottomGrid(false));

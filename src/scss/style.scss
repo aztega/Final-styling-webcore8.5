@@ -5,6 +5,7 @@
 @use "variables" as *;
 @use "servicesSupport";
 @use "brandRepairs";
+@use "equipmentRepairs";
 
 *{
   padding: 0px;
@@ -34,8 +35,9 @@ margin: 0px auto;
 max-width: 100%;
    flex: 1;
   min-width: 0;
+  max-height: 100vh;
+  overflow: auto;
 }
-
 
 @media (max-width: 768px) {
   .sidebar{display: none}
