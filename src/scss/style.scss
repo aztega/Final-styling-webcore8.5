@@ -6,6 +6,8 @@
 @use "servicesSupport";
 @use "brandRepairs";
 @use "equipmentRepairs";
+@use "mediaMediumScreen";
+@use "mediaSmallScreen";
 
 *{
   padding: 0px;
@@ -39,6 +41,40 @@ max-width: 100%;
   overflow: auto;
 }
 
-@media (max-width: 768px) {
-  .sidebar{display: none}
+@media (max-width: 530px) {
+  .container {
+    max-width: 500px;
+    margin:auto;
   }
+
+  .second-header-group .call-icon,
+  .chat-icon,
+  .profile-icon {
+    display: none;
+  }
+
+  .one {
+    display: none;
+  }
+
+  .side-menu-links::-webkit-scrollbar {
+    width: 0px;
+  }
+
+ .swiper {
+    width: 100%;
+     margin: 1px;
+    
+  .swiper-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  }
+
+button, button .show-second-button {
+  display: none !important;
+}
+}

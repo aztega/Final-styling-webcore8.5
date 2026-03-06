@@ -8,6 +8,10 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <aside class="sidebar">
@@ -233,15 +237,12 @@
         <button class="hide-button hide" id="hideButton">
           <img src="./img/hid Icon.png" alt="hide icon" />Hide
         </button>
-
-        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-        <script src="script.js"></script>
       </div>
 
       <section class="equipment-repairs">
         <h3>REPAIR OF VARIOUS TYPES OF EQUIPMENT</h3>
-        <div class="swiper mySwiper brand-repair-swiper">
-          <div class="swiper-wrapper equipment-repairs">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
             <div class="swiper-slide slides">
               <p>Laptop Repair</p>
               <img
@@ -307,6 +308,7 @@
               />
             </div>
           </div>
+          <div class="swiper-pagination"></div>
         </div>
         <button class="show-second-button" id="showSecondButton">
           <img src="./img/Expand icon.png" alt="show icon" />Show all
@@ -316,6 +318,7 @@
         </button>
       </section>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   </body>
 </html>
 

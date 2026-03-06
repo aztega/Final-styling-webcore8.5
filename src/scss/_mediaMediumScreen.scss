@@ -1,0 +1,60 @@
+@use "variables" as *;
+@use "mixin" as * ;
+@use "sass:color";
+
+
+@media (max-width: 768px) {
+  .large-screen-header-nav {
+    display: none !important;
+  }
+
+  .main-header {
+    display: block;
+  }
+
+  .main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-bottom: solid 1px #d9fff5;
+  }
+
+  .divider {
+    height: 40px;
+    background-color: #dddd;
+    width: 1px;
+}
+
+    article p {
+  padding: 20px;
+  font-size: 15px;
+  font-weight: 400;
+max-width: 300px;
+  }
+
+  .image-container img {
+ padding: 16px;
+max-width: 300px;
+}
+
+  .sidebar {
+    display: none;
+  }
+
+  .brandRepairs {
+    max-width: 100%;
+    margin: auto;
+  }
+
+
+  button {
+    display: flex;
+
+  }
+  .swiper {
+    width: auto;
+    height: 200px;
+  }
+}
+

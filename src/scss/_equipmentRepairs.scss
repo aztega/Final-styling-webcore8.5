@@ -7,21 +7,25 @@
   height: auto;
   font-family: "TTLakes";
   padding: 16px 8px;
+  margin-bottom: 16px;
 
   h3 {
     @include scdHeading;
-  }
-  .swiper {
+}
+  
+
+.swiper {
 width: 100%;
      margin: 16px auto;
-    .swiper-wrapper {
+
+     .swiper-wrapper {
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 5px;
     transition: all 0.3s ease;
   margin: 8px;
-  height: 200px;
+  height: 180px;
     width: 100%;
 
     .swiper-slide.slides {
@@ -36,7 +40,7 @@ width: 100%;
   border: solid 1px #eaeaea;
   position: relative;
 
-p {
+  p {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -50,20 +54,25 @@ p {
       position: absolute;
       bottom: 8px;
       right: 8px;
+  }
+    }
     }
   }
-} 
-button {
+
+  button {
   border: none;
   padding: 10px;
   background: none;
   font-family: inherit;
   font-weight: 500;
   cursor: pointer;
+  display: flex;
 
-  .hide {
-    display: none;
-  }
+  &.hide {
+  display: none;
 }
-  }
+
+
 }
+  
+    }

@@ -10,6 +10,7 @@
   font-size: 14px;
   background-color: #f8f8f8;
   padding: 16px 8px;
+  margin-bottom: 16px;
 
   h3 {
   @include scdHeading;
@@ -24,11 +25,9 @@
     
  .swiper-wrapper {
   margin: 16px;
-  height: 170px;
+  height: 162px;
     width: 100%;
-    overflow: hidden;
     display: grid;
-    // grid-template-columns: repeat(4, 1fr);
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 5px;
     transition: all 0.3s ease;
@@ -38,7 +37,7 @@
   max-width: 240px;
   min-width: 224px;
   height: 72px;
-  margin: 10px 0px 0px 0px;
+  margin: 8px 0px 0px 0px;
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -68,23 +67,46 @@ button {
   display: none;
 }
 
-@media (max-width: 768px) {
-  .brandRepairs{
-    max-width: 100%;
-    margin: auto;
-  }
-
-  .swiper-wrapper {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  button {
-    display: flex;
-  }
-  .swiper {
-    width: auto;
-    height: 200px;
-  }
+@media (max-width: 530px){
+  .swiper-slide {
+  max-width: 240px;
+  height: 72px;
+  margin: 10px 0px 30px 0px;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border: solid 1px #eaeaea;
 }
 
+.swiper-slide img {
+  margin: 10px;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  border: none;
+  padding: 10px;
+  background: none;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  display: none;
+}
+
+.showbutton,
+.hidebutton {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+}
