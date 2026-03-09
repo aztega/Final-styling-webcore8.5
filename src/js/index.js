@@ -2,8 +2,8 @@ import '../scss/style.scss'
 
 
       const swiper = new Swiper(".mySwiper", {
-        // slidesPerView: 1,
-        spaceBetween: 10,
+        slidesPerView: 1.2,
+        spaceBetween: 20,
         loop: true,
         pagination: {
           el: ".swiper-pagination",
@@ -11,7 +11,7 @@ import '../scss/style.scss'
         },
         
           breakpoints: {
-    530: {
+    500: {
       enabled: false,
     }
   }
@@ -20,11 +20,11 @@ import '../scss/style.scss'
 
 const showBtn = document.getElementById('showButton');
 const hideBtn = document.getElementById('hideButton');
-const bottomItems = document.querySelectorAll('.brandRepairs .swiper-wrapper');
+const bottomItems = document.querySelectorAll('.brandRepairs .swiper');
 
 function hideBottomGrid(show) {
   bottomItems.forEach(item => {
-    item.style.height = show ? 'auto' : '165px'; 
+    item.style.height = show ? 'auto' : '190px'; 
     item.style.overflow = show ? 'visible' : 'hidden';
   });
 
@@ -43,7 +43,7 @@ hideBtn.addEventListener('click', () => hideBottomGrid(false));
 
 const showSecondBtn = document.getElementById('showSecondButton');
 const hideSecondBtn = document.getElementById('hideSecondButton');
-const hideSecondBottom = document.querySelectorAll('.equipment-repairs .swiper-wrapper');
+const hideSecondBottom = document.querySelectorAll('.equipment-repairs .swiper');
 
 function hideSecondBottomGrid(show) {
   hideSecondBottom.forEach(item => {

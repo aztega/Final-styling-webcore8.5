@@ -3,9 +3,9 @@
 @use "sass:color";
 
 
-@media (max-width: 530px) {
+@media (max-width: 500px) {
   .container {
-    max-width: 500px;
+    max-width: 100%;
     margin:auto;
   }
 
@@ -26,6 +26,10 @@
  .swiper {
     width: 100%;
      margin: 1px;
+
+     &-slide {
+      margin: 16px;
+     }
     
   .swiper-wrapper {
     width: 100%;

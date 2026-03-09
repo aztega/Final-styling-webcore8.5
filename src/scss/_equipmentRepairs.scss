@@ -5,34 +5,35 @@
 .equipment-repairs {
  max-width: 100%;
   height: auto;
-  font-family: "TTLakes";
+  background-color: #f8f8f8;
   padding: 16px 8px;
   margin-bottom: 16px;
 
   h3 {
     @include scdHeading;
+    width: 100%;
 }
   
 
 .swiper {
-width: 100%;
+max-width: 100%;
      margin: 16px auto;
+     overflow: hidden;
+ height: 180px;
 
-     .swiper-wrapper {
-    overflow: hidden;
+    &-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 5px;
     transition: all 0.3s ease;
   margin: 8px;
-  height: 180px;
-    width: 100%;
+     max-width: 100% !important;
+  }
 
-    .swiper-slide.slides {
+    &-slide.slides {
     max-width: 240px;
-  min-width: 224px;
   height: 160px;
-  margin: 10px 0px 0px 0px;
+  margin: 10px 0px 16px 0px;
   font-size: 18px;
   background: #fff;
   display: flex;
@@ -50,12 +51,12 @@ width: 100%;
     top: 8px;
     left: 8px;
   }
+
   .icons {
       position: absolute;
       bottom: 8px;
       right: 8px;
   }
-    }
     }
   }
 
@@ -71,8 +72,5 @@ width: 100%;
   &.hide {
   display: none;
 }
-
-
 }
-  
     }

@@ -12,6 +12,7 @@
     display: block;
   }
 
+ 
   .main-header {
     display: flex;
     align-items: center;
@@ -58,3 +59,12 @@ max-width: 300px;
   }
 }
 
+
+@media  (max-width: 500px) {
+  .second-header-group .call-icon,
+  .chat-icon,
+  .profile-icon {
+    display: none;
+  } 
+  
+}

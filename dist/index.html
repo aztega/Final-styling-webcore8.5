@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Final Styling</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
   <script defer="defer" src="./js/bundle.js"></script><link href="style.css" rel="stylesheet"></head>
   <body>
     <aside class="sidebar">
@@ -171,15 +172,15 @@
               <img src="./img/sony.png" alt="sony logo">
               <img src="./img/Go Icon Container.png" alt="go-icon">
             </div>
-            <div class="swiper-slide bottom">
+            <div class="swiper-slide">
               <img src="./img/lenovo.png" alt="lenovo logo">
               <img src="./img/Go Icon Container.png" alt="go-icon">
             </div>
-            <div class="swiper-slide bottom">
+            <div class="swiper-slide">
               <img src="./img/samsung.png" alt="samsung logo">
               <img src="./img/Go Icon Container.png" alt="go-icon">
             </div>
-            <div class="swiper-slide bottom">
+            <div class="swiper-slide">
               <img src="./img/apple.png" alt="apple logo">
               <img src="./img/Go Icon Container.png" alt="go-icon">
             </div>
@@ -193,14 +194,11 @@
         <button class="hide-button hide" id="hideButton">
           <img src="./img/hid Icon.png" alt="hide icon">Hide
         </button>
-
-        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-        <script src="script.js"></script>
       </div>
 
       <section class="equipment-repairs">
         <h3>REPAIR OF VARIOUS TYPES OF EQUIPMENT</h3>
-        <div class="swiper mySwiper brand-repair-swiper">
+        <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide slides">
               <p>Laptop Repair</p>
@@ -235,6 +233,7 @@
               <img class="icons" src="./img/Go Icon Container.png" alt="go icon">
             </div>
           </div>
+          <div class="swiper-pagination"></div>
         </div>
         <button class="show-second-button" id="showSecondButton">
           <img src="./img/Expand icon.png" alt="show icon">Show all
@@ -243,8 +242,42 @@
           <img src="./img/hid Icon.png" alt="hide icon">Hide
         </button>
       </section>
+
+      <div class="prices">
+        <h3>SERVICES PRICES</h3>
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="price-head">
+                <p>Repair Services</p>
+              </div>
+              <div class="service-content">
+                <p>Testing with a technical support</p>
+              </div>
+              <div class="price-head">
+                <p>Price</p>
+              </div>
+              <div class="service-content">
+                <p>Free of charge</p>
+              </div>
+
+              <div class="price-head">
+                <p>Term</p>
+              </div>
+              <div class="service-content">
+                <p>30-120mins</p>
+                <button class="order-btn">
+                  ORDER <img src="./img/go-Line.svg">
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   </body>
 </html>
-
-
