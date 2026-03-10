@@ -4,11 +4,20 @@
 
 
 .servicePrices {
-  max-width: 100%;
+  max-width: 1120px;
+  width: 100%;
   height: auto;
   background-color: #f8f8f8;
   padding: 16px 8px;
   margin-bottom: 16px;
+
+  .table-header{
+display:grid;
+grid-template-columns:2fr 1fr 1fr 150px;
+color:#9c9c9c;
+font-size:14px;
+padding-bottom:15px;
+}
 
   h3 {
     @include scdHeading;
@@ -16,12 +25,18 @@
   }
 
   .swiper {
-    max-width: 100% !important;
-    margin-bottom: 34px;
-    height: auto;
-    display: flex;
+    max-width: 1056px;
+width: 100%;
+background: white;
+padding: 10px;
+border-radius: 14px;
+    // max-width: 100% !important;
+    // margin-bottom: 34px;
+    // height: auto;
+    // display: flex;
 
     &-wrapper {
+      width: 100% !important;
       display: grid;
       grid-template-columns: repeat (auto-fill, minmax(260px), 1fr);
        margin: 8px;
@@ -30,13 +45,13 @@
     }
 
     &-slide.thirdSlide {
-  width: 100% !important;
-     display: grid;
-      grid-template-columns: repeat (auto-fill, minmax(260px), 1fr);
-      
-      align-items: center;
-      padding: 8px;
-      border-bottom: solid 1px #dedede;
+      width: 100% !important;
+  display:grid;
+grid-template-columns: 2fr 1fr 1fr 1fr;
+align-items: center;
+padding: 8px 0;
+border-bottom: 1px solid #eee;
+font-size: 16px;
       
 
       &:last-of-type {
@@ -89,16 +104,45 @@ display: none;
     }
   }
 
+.pricesFooter {
+  width: 421px;
+  margin: 16px;
+
+  p {
+    padding: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+  }
+
+  .commercial {
+    width: 316px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    a {
+      color: $secondaryText;
+      text-decoration: none;
+      padding: 8px;
+      margin: 16px 0px;
+    }
+  }
+
+}
    
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 320px) {
 .servicePrices {
   width: 500px;
   max-width: 100%;
   margin: auto;
 
+  span {
+  display: none;
+}
   
   .swiper {
   max-width: 100%;
@@ -143,8 +187,6 @@ display: none;
   position: absolute;
   bottom: 16px;
   right: 16px;
-
-  
 
   img {
     width: 7px;
@@ -191,7 +233,27 @@ display: block;
   }
 }
 }
+.pricesFooter {
+  width: 288px;
 
-}
+  p {
+    width: 288px;
+    padding: 8px;
+    margin: 4px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+  }
+
+  .commercial {
+    max-width: 220px;
+    width: 100%;
+    display: flex;
+    flex: row;
+
+  }
+
+
+}}
 
 
