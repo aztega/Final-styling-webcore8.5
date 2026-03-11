@@ -3,7 +3,7 @@ import '../scss/style.scss'
 
       const swiper = new Swiper(".mySwiper", {
         slidesPerView: 1.2,
-        spaceBetween: 20,
+        spaceBetween: 10,
         loop: true,
         pagination: {
           el: ".swiper-pagination",
