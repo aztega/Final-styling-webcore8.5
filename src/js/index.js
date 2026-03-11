@@ -58,4 +58,28 @@ function hideSecondBottomGrid(show) {
 showSecondBtn.addEventListener('click', () => hideSecondBottomGrid(true));
 hideSecondBtn.addEventListener('click', () => hideSecondBottomGrid(false));
 
-swiper.update()
+
+const sidebar = document.querySelector('.sidebar');
+const backdrop = document.getElementById('sidebarBackdrop');
+const menuIcon = document.getElementById('menuIcon');
+const closeIcon = document.getElementById('closeIcon');
+const hideGroup = document.querySelector('.second-header-group')
+
+function openSidebar() {
+  sidebar.classList.add('is-active');
+  backdrop.classList.add('is-active'); 
+  document.body.style.overflow = 'hidden'; 
+  hideGroup.style.display = 'none';
+}
+
+function closeSidebar() {
+  sidebar.classList.remove('is-active');
+  backdrop.classList.remove('is-active');
+  document.body.style.overflow = 'auto';
+  hideGroup.style.display = 'flex';
+}
+
+menuIcon.addEventListener('click', openSidebar);
+closeIcon.addEventListener('click', closeSidebar);
+
+backdrop.addEventListener('click', closeSidebar);
