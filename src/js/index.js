@@ -11,7 +11,7 @@ import '../scss/style.scss'
         },
         
           breakpoints: {
-    500: {
+    320: {
       enabled: false,
     }
   }
@@ -64,12 +64,14 @@ const backdrop = document.getElementById('sidebarBackdrop');
 const menuIcon = document.getElementById('menuIcon');
 const closeIcon = document.getElementById('closeIcon');
 const hideGroup = document.querySelector('.second-header-group')
+const displayCloseIcon = document.querySelector('.close');
 
 function openSidebar() {
   sidebar.classList.add('is-active');
   backdrop.classList.add('is-active'); 
   document.body.style.overflow = 'hidden'; 
   hideGroup.style.display = 'none';
+  displayCloseIcon.style.display = 'flex';
 }
 
 function closeSidebar() {
@@ -77,6 +79,7 @@ function closeSidebar() {
   backdrop.classList.remove('is-active');
   document.body.style.overflow = 'auto';
   hideGroup.style.display = 'flex';
+  displayCloseIcon.style.display = 'none';
 }
 
 menuIcon.addEventListener('click', openSidebar);

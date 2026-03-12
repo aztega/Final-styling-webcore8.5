@@ -3,7 +3,7 @@
 @use "sass:color";
 
 
-@media (max-width: 500px) {
+@media (max-width: 320px) {
   .container {
     max-width: 100%;
     margin:auto;
@@ -27,11 +27,8 @@
     width: 100%;
      margin: 1px;
 
-     &-slide {
-      margin: 16px;
-     }
     
-  .swiper-wrapper {
+  &-wrapper {
     width: 100%;
     display: flex;
     gap: 5px;

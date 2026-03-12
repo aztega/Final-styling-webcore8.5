@@ -6,7 +6,7 @@
  max-width: 100%;
   height: auto;
   background-color: #f8f8f8;
-  padding: 16px 8px;
+  // padding: 16px 8px;
 
   h3 {
     @include scdHeading;
@@ -73,13 +73,16 @@ max-width: 100%;
 }
 }
 
- @media (max-width: 400px){
+ @media (max-width: 320px){
      .swiper {
-
 max-width: 100%;
     margin: 4px auto;
     overflow: hidden;
     height: 220px;
+
+    &-wrapper {
+      display: flex;
+    }
      }     
     }
     }
